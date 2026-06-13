@@ -1,0 +1,7 @@
+Componente por Funcionalidade:
+
+- Secções de listagem de games - GamesSection(titulo & array de resultados)
+- Cartão com informação do game - GameCard
+- Botão favoritar - FavoriteButton
+ 
+ 

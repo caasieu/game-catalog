@@ -1,0 +1,6 @@
+Componente por Funcionalidade:
+
+- Pesquisar por nome, etc - SearchBox
+- Grelha de games retornados - SearchResults
+- Cartão retornado na pesquisa - SearchGameCard
+

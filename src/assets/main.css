@@ -1,0 +1,23 @@
+@import url('https://googleapis.com');
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #eaedad; /* Maps to class: bg-primary, text-primary */
+  --color-secondary: #1e232a; /* Maps to class: bg-secondary, text-secondary */
+  --color-tertiary: #3a4d28; /* Maps to class: bg-secondary, text-secondary */
+  --color-quaternary: #c85a32; /* Maps to class: bg-secondary, text-secondary */
+  --color-quinary: #f7f9e3; /* Maps to class: bg-secondary, text-secondary */
+  --color-sextary: #7d9070; /* Maps to class: bg-secondary, text-secondary */
+}
+
+/* Global Native Baseline Injection */
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-quinary);
+    color: var(--color-text-main);
+  }
+}

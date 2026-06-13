@@ -1,0 +1,6 @@
+Componente por Funcionalidade:
+
+- Preencher formulário de entrada e registro - Form, Input, SubmitFormButton
+- Botão "cadastrar-se" e "iniciar sessão" redireciona para a respectiva página - Link
+- Botão enviar formulário de inicio de sessão redireciona para a home - SubmitFormButton
+ 
