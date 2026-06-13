@@ -9,13 +9,13 @@ defineProps<{ game: GameType }>();
 
 <template>
   <div
-    class="relative p-2 md:p-2.5 min-h-65 md:min-h-80 lg:min-h-95 bg-primary rounded-md flex flex-col overflow-hidden">
+    class="relative p-2 md:p-2.5 min-h-65 md:min-h-80 lg:min-h-95 bg-quinary/80 shadow-sm rounded-md flex flex-col overflow-hidden">
 
     <div class="relative w-full h-[80%] md-[65%] flex flex-col">
       <div class="relative flex-1 w-full h-full overflow-hidden">
 
         <div class="absolute top-0 left-1 z-10">
-          <span class="text-white bg-secondary/50 px-4 py-0.5 rounded-md text-xs"> mini info </span>
+          <span class="text-white bg-secondary/50 px-4 py-0.5 rounded-md text-[8pt]"> mini info </span>
         </div>
 
         <div class="relative w-full h-full bg-quaternary/50 rounded-md overflow-hidden">
@@ -36,7 +36,7 @@ defineProps<{ game: GameType }>();
           Ver Detalhes
         </button>
 
-        <button class="hidden md:block w-full bg-secondary text-quinary py-2 px-4 rounded-sm text-quinary">
+        <button class="hidden md:block w-full bg-secondary text-quinary py-2 px-4 rounded-sm ">
           Adicionar aos Favoritos
         </button>
       </div>
