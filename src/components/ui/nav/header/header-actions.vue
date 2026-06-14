@@ -7,8 +7,6 @@ import PremiumBtn from './premium-btn.vue';
 
 <template>
   <div class="flex flex-row items-center justify-end h-full gap-3">
-
-
     <HeaderUserCard />
 
     <NotificationBtn />

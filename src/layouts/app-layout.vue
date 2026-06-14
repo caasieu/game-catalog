@@ -8,7 +8,7 @@ import HeaderWrapper from '@/components/ui/nav/header/header-wrapper.vue';
 <template>
   <HeaderWrapper />
 
-  <main class="px-3 pb-50">
+  <main class="pb-50">
     <RouterView />
   </main>
 

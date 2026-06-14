@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import Button from "primevue/button"
+import CategoriesSection from "@/features/home/components/categories-section.vue";
+import HeroSection from "@/features/home/components/hero-section.vue";
+
 
 </script>
 
 <template>
-  <div>
-    <Button> Vue Button </Button>
-  </div>
-
-  <div>
-    <span> Home Page </span>
+  <div class="w-full flex flex-col gap-4">
+    <HeroSection />
+    <CategoriesSection />
   </div>
 </template>
-
-<style scoped></style>
