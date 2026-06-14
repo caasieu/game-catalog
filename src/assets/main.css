@@ -17,7 +17,7 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--color-quinary);
+    background-color: white; /*var(--color-quinary);*/
     color: var(--color-text-main);
   }
 }
