@@ -1,6 +1,14 @@
 <script setup lang="ts">
-import FavoriteButton from './FavoriteButton.vue';
+import FavoriteButton from './favorite-button.vue';
 
+
+/*interface GameType {
+  id: number;
+  name: string;
+}
+
+defineProps<{ game: GameType }>();
+*/
 </script>
 
 <template>

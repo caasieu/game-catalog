@@ -4,9 +4,9 @@ import NavBtn from './nav-btn.vue';
 
 const routes = [
   { label: 'Home', icon: 'pi-home', path: '/' },
-  { label: 'Novidades', icon: 'pi-bell', path: '/search' },
+  { label: 'Novidades', icon: 'pi-lightbulb', path: '/search' },
   { label: 'Favoritos', icon: 'pi-heart', path: '/search' },
-  { label: 'Biblioteca', icon: 'pi-cog', path: '/' },
+  { label: 'Biblioteca', icon: 'pi-bookmark', path: '/' },
   { label: 'Pesquisar', icon: 'pi-search', path: '/search' },
 ]
 

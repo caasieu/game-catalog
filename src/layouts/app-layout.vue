@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import BottomNav from '@/components/ui/nav/bottom/bottom-nav.vue';
-import HeaderWrapper from '@/components/ui/nav/header/header-wrapper.vue';
+//import BottomNav from '@/components/ui/nav/bottom/bottom-nav.vue';
+import HeaderWrapper from '@/components/ui/header/header-wrapper.vue';
+import FooterWrapper from '@/components/ui/footer/footer-wrapper.vue';
 
 
 </script>
@@ -8,9 +9,9 @@ import HeaderWrapper from '@/components/ui/nav/header/header-wrapper.vue';
 <template>
   <HeaderWrapper />
 
-  <main class="pb-50">
+  <main>
     <RouterView />
   </main>
 
-  <BottomNav />
+  <FooterWrapper />
 </template>

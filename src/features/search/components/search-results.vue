@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import SearchGameCard from './search-game-card.vue';
+import CardGridSearch from '@/features/games/components/card-grid-search.vue';
 
 
 const games = ref([
@@ -17,15 +17,18 @@ const games = ref([
 </script>
 
 <template>
+  <div class="flex flex-col gap-2 px-3 sm:px-6 pt-[7rem] lg:pt-[4.5rem]">
+    <div class="font-semibold">
+      <h4> Escolha os seus jogos </h4>
+    </div>
 
-  <div class="
-    grid
-    grid-cols-2
-    md:grid-cols-3
-    lg:grid-cols-5
+    <div class="
+    grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
     gap-3
   ">
-    <SearchGameCard v-for="game in games" :key="game.name" :game="game" />
+      <!--<CardGrid v-for="game in games" :key="game.name" :game="game" />-->
+      <CardGridSearch v-for="game in games" :key="game.name" />
+    </div>
   </div>
 </template>
 

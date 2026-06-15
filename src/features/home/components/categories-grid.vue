@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CardGrid from '@/features/games/components/CardGrid.vue';
+import CardGrid from '@/features/games/components/card-grid.vue';
 
 </script>
 

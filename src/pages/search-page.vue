@@ -11,7 +11,7 @@ const games = ref<Game[]>([]);
 </script>
 
 <template>
-  <div>
+  <div class="w-full flex flex-col gap-4">
     <SearchResults :games="games" />
   </div>
 </template>
