@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import FavoriteButton from './favorite-button.vue';
+import CardGridImage from './card-grid-image.vue';
+import CardGridGenre from './card-grid-genre.vue';
 
 
 /*interface GameType {
@@ -9,13 +11,17 @@ import FavoriteButton from './favorite-button.vue';
 
 defineProps<{ game: GameType }>();
 */
+
+const genres = [
+  'Horror',
+  'Ação',
+  'Aventura',
+]
 </script>
 
 <template>
   <div class="flex flex-col justify-between gap-2 border-1 p-2 min-h-[20rem]">
-    <div class="relative w-full min-h-[15rem] bg-gray-100">
-      <img class="absolute inset-0 w-full h-full object-cover" alt="user header" src="/images/characters.webp" />
-    </div>
+    <CardGridImage />
 
     <div class="flex flex-col w-full gap-2">
       <div>
@@ -24,9 +30,7 @@ defineProps<{ game: GameType }>();
 
 
       <div class="flex flex-row gap-2 text-xs">
-        <div class="border-1 px-2"> <span> Horror </span> </div>
-        <div class="border-1 px-2"> <span> Ação </span> </div>
-        <div class="border-1 px-2"> <span> Aventura </span> </div>
+        <CardGridGenre v-for="genre in genres" :key="genre" :genre="genre" />
       </div>
     </div>
 

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CardGridImage from './card-grid-image.vue';
 import FavoriteButton from './favorite-button.vue';
 import SaveButton from './save-button.vue';
 
@@ -14,9 +15,8 @@ defineProps<{ game: GameType }>();
 
 <template>
   <div class="flex flex-col justify-between gap-2 border-1 p-2 min-h-[20rem]">
-    <div class="relative w-full min-h-[15rem] bg-gray-100">
-      <img class="absolute inset-0 w-full h-full object-cover" alt="user header" src="/images/characters.webp" />
-    </div>
+    <CardGridImage />
+
 
     <div class="flex flex-col w-full gap-2">
       <div>

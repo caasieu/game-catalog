@@ -3,6 +3,6 @@
 
 <template>
   <div class="font-bold">
-    <h4> Gameya </h4>
+    <h4> Gameia </h4>
   </div>
 </template>
