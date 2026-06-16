@@ -1,12 +1,7 @@
 <script setup lang="ts">
+import type { RouteButtonType } from './types/route-button-type';
 
-interface RouteButtonType {
-  path: string,
-  label: string,
-  icon: string | null | undefined
-}
 defineProps<{ route: RouteButtonType }>()
-
 </script>
 
 <template>

@@ -1,20 +1,15 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
 import { computed } from 'vue';
-import HeaderActions from './header-actions.vue';
-import HeaderNav from './header-nav.vue';
-import SearchInput from './search-input.vue';
 
-import AppLogo from '../app-logo.vue';
-
+import AppLogo from '../shared/app-logo.vue';
+import HeaderSearchInput from './header-search-input.vue';
+import HeaderContent from './header-content.vue';
 
 const route = useRoute()
 
 const isSearchPage = computed(() => route.path === '/search')
-
-
 </script>
-
 
 <template>
   <header
@@ -22,19 +17,12 @@ const isSearchPage = computed(() => route.path === '/search')
     <div class="flex flex-row items-center justify-between w-full ">
       <AppLogo />
 
-      <div class="flex flex-row items-center gap-3">
-
-        <HeaderNav />
-
-        <HeaderActions />
-      </div>
-
+      <HeaderContent />
     </div>
 
-
-    <!-- Mobile: only on search page -->
+    <!-- Mobile: input de pesquisa apenas na rota /search -->
     <div v-if="isSearchPage" class="block lg:hidden">
-      <SearchInput />
+      <HeaderSearchInput />
     </div>
   </header>
 </template>

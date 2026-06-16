@@ -1,22 +1,19 @@
 <script setup lang="ts">
-import UserCard from '../user-card.vue';
-import DrawerButton from './drawer-button.vue';
-//import HeaderUserCard from './header-user-card.vue';
-import NotificationBtn from './notification-btn.vue';
-import PremiumBtn from './premium-btn.vue';
+import DrawerButton from '../drawer/drawer-button.vue';
+import NotificationButton from '../shared/app-notification-button.vue';
+import HeaderUserCard from './header-user-card.vue';
+import AppPremiumButton from '../shared/app-premium-button.vue';
 
 </script>
 
 <template>
   <div class="flex flex-row items-center justify-end h-full gap-3">
-    <!-- <HeaderUserCard /> -->
-    <UserCard />
+    <HeaderUserCard />
 
-    <NotificationBtn />
-
+    <NotificationButton />
 
     <div class="hidden sm:block h-[2rem]">
-      <PremiumBtn />
+      <AppPremiumButton />
     </div>
 
     <DrawerButton />

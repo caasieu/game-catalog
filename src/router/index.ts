@@ -4,12 +4,11 @@ import FavoritesPage from '@/pages/favorites-page.vue'
 import GamePage from '@/pages/game-page.vue'
 import HomePage from '@/pages/home-page.vue'
 import LoginPage from '@/pages/login-page.vue'
-import NewsPage from '@/pages/news-page.vue'
 import NotificationsPage from '@/pages/notifications-page.vue'
 import RegisterPage from '@/pages/register-page.vue'
 import SearchPage from '@/pages/search-page.vue'
+import TrendingPage from '@/pages/trending-page.vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import ProgressPage from '@/pages/progress-page.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,13 +33,8 @@ const router = createRouter({
         },
 
         {
-          path: '/news',
-          component: NewsPage,
-        },
-
-        {
-          path: '/progress',
-          component: ProgressPage,
+          path: '/trending',
+          component: TrendingPage,
         },
 
         {

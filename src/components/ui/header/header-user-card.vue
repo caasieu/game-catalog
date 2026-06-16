@@ -3,6 +3,9 @@ import { ref } from 'vue'
 import { useBreakpoints } from '@vueuse/core'
 
 import { Popover } from 'primevue';
+import AppUserInfo from '../shared/app-user-info.vue';
+import AppLogoutButton from '../shared/app-logout-button.vue';
+import AppThemeChangeButton from '../shared/app-theme-change-button.vue';
 
 const popover = ref()
 
@@ -14,7 +17,7 @@ const breakpoints = useBreakpoints({
 
 const isDesktop = breakpoints.greaterOrEqual('desktop')
 
-function handleNotifications(event: MouseEvent) {
+function handleSettings(event: MouseEvent) {
   if (isDesktop.value) {
     popover.value.toggle(event)
   }
@@ -24,32 +27,20 @@ function handleNotifications(event: MouseEvent) {
 </script>
 
 <template>
-  <div @click="handleNotifications" class="flex flex-row items-center gap-2 h-full">
-    <div class="relative h-[2rem] w-[2rem]">
-      <img class="absolute inset-0 w-full h-full object-cover" alt="user header"
-        src="https://primefaces.org/cdn/primevue/images/organization/walter.jpg" />
-    </div>
-
-    <div class="flex flex-col text-sm">
-      <span class="font-semibold"> Walter White </span>
-      <span> @walter </span>
-    </div>
-  </div>
+  <AppUserInfo @click="handleSettings" />
 
 
   <Popover ref="popover">
     <div class="flex flex-col gap-3 min-w-[150px]">
       <h3 class="font-semibold">
-        Notificações
+        Definições do Usuário
       </h3>
 
       <div class="border-b pb-2">
-        Visitar Perfil
+        <AppThemeChangeButton />
       </div>
 
-      <div>
-        Terminar Sessão
-      </div>
+      <AppLogoutButton :showIcon="false" />
     </div>
   </Popover>
 </template>

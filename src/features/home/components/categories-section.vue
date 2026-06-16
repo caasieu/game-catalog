@@ -22,19 +22,20 @@ const ratings = {
   ],
 };
 
+defineProps<{ label: string, showRatings: boolean }>();
 </script>
 
 <template>
   <div class="flex flex-col gap-2 px-3 sm:px-6">
     <div class="flex flex-row justify-between items-end w-full">
       <div class="font-semibold">
-        <h4> Categorias que você pode gostar </h4>
+        <h4> {{ label }} </h4>
       </div>
 
       <div class="flex flex-col items-end sm:flex-row gap-3 sm:items-center justify-end">
         <SelectBox :select="genres" />
 
-        <SelectBox :select="ratings" />
+        <SelectBox v-if="showRatings" :select="ratings" />
       </div>
     </div>
 

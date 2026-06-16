@@ -1,17 +1,14 @@
 <script setup lang="ts">
-//import BottomNav from '@/components/ui/nav/bottom/bottom-nav.vue';
-import HeaderWrapper from '@/components/ui/header/header-wrapper.vue';
-import FooterWrapper from '@/components/ui/footer/footer-wrapper.vue';
-
-
+import FooterContainer from '@/components/ui/footer/footer-container.vue';
+import HeaderContainer from '@/components/ui/header/header-container.vue';
 </script>
 
 <template>
-  <HeaderWrapper />
+  <HeaderContainer />
 
   <main>
     <RouterView />
   </main>
 
-  <FooterWrapper />
+  <FooterContainer />
 </template>
