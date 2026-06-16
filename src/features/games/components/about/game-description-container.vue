@@ -1,11 +1,16 @@
 <script setup lang="ts">
 import GameDescriptionSection from './game-description-section.vue';
 
+const gameAbout = {
+  label: '',
+  background_image: '/images/background.jpg',
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deserunt quos, natus tenetur illo fugit corrupti placeat molestiae aperiam dolor? Soluta rerum incidunt quia reprehenderit consequuntur repellendus, voluptate similique nulla?",
+}
 </script>
 
 <template>
   <div class="
-    px-3 sm:px-6
+    px-6
     pt-[7rem] lg:pt-[4.5rem]
     flex flex-col
     w-full
@@ -15,7 +20,8 @@ import GameDescriptionSection from './game-description-section.vue';
     </div>
 
     <div class="flex flex-col gap-4">
-      <GameDescriptionSection v-for="value in [1, 2, 3]" :key="value" />
+      <GameDescriptionSection :label="gameAbout?.label" :background_image="gameAbout?.background_image"
+        :description="gameAbout?.description" />
     </div>
   </div>
 </template>

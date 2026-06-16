@@ -29,19 +29,21 @@ function handleSettings(event: MouseEvent) {
 
   <Popover ref="popover">
     <template #container>
-      <div @click.stop class="flex flex-col gap-3 w-[200px]">
-        <div class="flex items-center h-[3rem] px-3 ">
+      <div @click.stop class="flex flex-col w-[200px] text-sm">
+        <div class="flex items-center shadow-sm h-[3rem] px-3 bg-card border-b-1 border-border">
           <h3 class="font-semibold">
             Definições do Usuário
           </h3>
         </div>
 
-        <div class="flex flex-col gap-3 pb-3 px-3 ">
-          <div class="border-b pb-2">
+        <div class="flex flex-col gap-3 pb-3">
+          <div class="flex items-center border-border border-b-1  px-3 h-[3rem]">
             <AppThemeChangeButton />
           </div>
 
-          <AppLogoutButton :showIcon="false" />
+          <div class=" px-3 ">
+            <AppLogoutButton :showIcon="false" />
+          </div>
         </div>
       </div>
     </template>

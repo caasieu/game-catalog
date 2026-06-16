@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import GameDescriptionImage from './game-description-image.vue';
 
-
+defineProps<{
+  label?: string,
+  description?: string,
+  background_image?: string
+}>()
 </script>
 
 <template>
@@ -9,20 +13,17 @@ import GameDescriptionImage from './game-description-image.vue';
 
     <div class="flex flex-col gap-1 text-sm">
       <div>
-        <h5 class="font-semibold text-red-300"> Subsecção aqui </h5>
+        <h5 class="font-semibold text-red-300"> {{ label }} </h5>
       </div>
 
       <div>
-        <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deserunt quos, natus tenetur illo
-          fugit corrupti placeat molestiae aperiam dolor? Soluta rerum incidunt quia reprehenderit consequuntur
-          repellendus,
-          voluptate similique nulla? </span>
+        <span> {{ description }} </span>
       </div>
     </div>
 
 
     <div>
-      <GameDescriptionImage />
+      <GameDescriptionImage :background_image="background_image" />
     </div>
   </div>
 </template>

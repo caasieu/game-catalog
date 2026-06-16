@@ -42,29 +42,37 @@ const categories = [
 <template>
   <Drawer :visible="props.visible" @update:visible="emit('update:visible', $event)" position="right">
     <template #container>
-      <div class="w-full px-6">
-        <div class="flex flex-row justify-between items-center h-[6rem] border-b-1">
-          <AppUserInfo avatarClass="h-[4rem] w-[4rem]" />
+      <div class="w-full bg-surface text-xs" @click.stop>
+        <div class="flex flex-row justify-between items-center h-[6rem] border-b-1 border-border text-xs px-6 ">
+          <AppUserInfo avatarClass="h-[3rem] w-[3rem] " />
 
           <!-- Botão "X" para fechar drawer, chama funcão closeDrawer e emit o evento -->
           <div @click="closeDrawer">
-            <i class="pi pi-times"></i>
+            <i class="pi pi-times" style="font-size: 12pt;"></i>
           </div>
         </div>
 
-        <div class="flex flex-col gap-2 ">
-          <DrawerCategories v-for="category in categories" :key="category.label" :category="category"
-            @click="closeDrawer" />
 
-          <AppThemeChangeButton />
 
-          <div class="flex flex-col gap-3 text-lg py-4">
-            <div class="w-full h-[3rem]">
-              <AppPremiumButton />
-            </div>
+        <div class="card ">
+          <div class="overflow-y-auto" style="height: calc(100vh - 6rem)">
+            <div class="flex flex-col gap-2 px-6 pb-40">
+              <DrawerCategories @navigate="closeDrawer" v-for="category in categories" :key="category.label"
+                :category="category" />
 
-            <div class="w-full h-[3rem]">
-              <AppLogoutButton :showIcon="false" />
+              <div class="flex  items-center w-full h-[3rem]">
+                <AppThemeChangeButton />
+              </div>
+
+              <div class="flex flex-col gap-3 text-xs py-4">
+                <div class="w-full h-[3rem]">
+                  <AppPremiumButton />
+                </div>
+
+                <div class="w-full h-[3rem]">
+                  <AppLogoutButton :showIcon="false" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

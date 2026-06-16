@@ -9,7 +9,7 @@ const { isDark } = useTheme()
 
 
 <template>
-  <div class="card flex justify-between items-center">
+  <div class="card flex justify-between items-center w-full">
     <span>
       {{ isDark ? 'Dark Mode' : 'Light Mode' }}
     </span>
@@ -17,3 +17,9 @@ const { isDark } = useTheme()
     <ToggleSwitch v-model="isDark" />
   </div>
 </template>
+
+<style>
+.p-toggleswitch.p-toggleswitch-checked .p-toggleswitch-slider {
+  background-color: var(--color-primary) !important;
+}
+</style>
