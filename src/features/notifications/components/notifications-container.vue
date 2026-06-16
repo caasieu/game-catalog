@@ -6,8 +6,8 @@ import NotificationsPerDay from './notifications-per-day.vue';
 </script>
 
 <template>
-  <div class="w-full pt-20">
-    <div class="px-6 h-[2rem]">
+  <div class="w-full pt-15">
+    <div class="flex items-center px-6 h-[3rem] border-b-1 border-border">
       <h2 class="font-semibold"> Notificações </h2>
     </div>
 
