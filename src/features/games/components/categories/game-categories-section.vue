@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import CategoriesGrid from './categories-grid.vue';
-import SelectBox from './select-box.vue';
+
+import SelectBox from '@/features/shared/components/select-box.vue';
+import GameCategoriesGrid from './game-categories-grid.vue';
+
 
 
 const genres = {
@@ -39,6 +41,6 @@ defineProps<{ label: string, showRatings: boolean }>();
       </div>
     </div>
 
-    <CategoriesGrid />
+    <GameCategoriesGrid />
   </div>
 </template>

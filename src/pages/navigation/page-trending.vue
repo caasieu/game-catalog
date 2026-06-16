@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CategoriesSection from '@/features/home/components/categories-section.vue';
+import GameCategoriesSection from '@/features/games/components/categories/game-categories-section.vue';
 import TopTrending from '@/features/trending/components/top-trending.vue';
 
 
@@ -12,7 +12,7 @@ const showRatings = false;
       <TopTrending />
     </div>
 
-    <CategoriesSection label="Mais Populares agora" :show-ratings="showRatings" />
+    <GameCategoriesSection label="Mais Populares agora" :show-ratings="showRatings" />
 
   </div>
 </template>

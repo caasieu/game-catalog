@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import DescriptionImage from './description-image.vue';
+import GameDescriptionImage from './game-description-image.vue';
+
 
 </script>
 
@@ -21,7 +22,7 @@ import DescriptionImage from './description-image.vue';
 
 
     <div>
-      <DescriptionImage />
+      <GameDescriptionImage />
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import CardGridSearch from '@/features/games/components/card-grid-search.vue';
+import GameCardSearch from '@/features/games/components/game-card-search.vue';
 
 
 const games = ref([
@@ -27,7 +27,7 @@ const games = ref([
     gap-3
   ">
       <!--<CardGrid v-for="game in games" :key="game.name" :game="game" />-->
-      <CardGridSearch v-for="game in games" :key="game.name" />
+      <GameCardSearch v-for="game in games" :key="game.name" />
     </div>
   </div>
 </template>

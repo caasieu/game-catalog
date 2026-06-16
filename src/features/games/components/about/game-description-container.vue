@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import DescriptionSection from './description-section.vue';
+import GameDescriptionSection from './game-description-section.vue';
 
 </script>
 
@@ -15,7 +15,7 @@ import DescriptionSection from './description-section.vue';
     </div>
 
     <div class="flex flex-col gap-4">
-      <DescriptionSection v-for="value in [1, 2, 3]" :key="value" />
+      <GameDescriptionSection v-for="value in [1, 2, 3]" :key="value" />
     </div>
   </div>
 </template>
