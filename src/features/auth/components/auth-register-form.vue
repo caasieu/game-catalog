@@ -1,29 +1,35 @@
 <script setup lang="ts">
 import AuthSocialLogin from '@/features/auth/components/auth-social-login.vue';
+import AuthInput from './auth-input.vue';
+import AuthSubmitButton from './auth-submit-button.vue';
+import { useRouter } from 'vue-router';
+
+
+const router = useRouter()
+async function handleSubmit() {
+  try {
+    // await authStore.login(email, password)
+
+    router.push('/login')
+  } catch (error) {
+    console.error(error)
+  }
+}
 
 </script>
 
 <template>
-  <form>
+  <form @submit.prevent="handleSubmit">
     <div class="flex flex-col gap-2 w-full">
       <div class="flex flex-col gap-2">
-        <div class="border-1">
-          <input type="text" id="email" placeholder="E-mail" class="p-2" />
-        </div>
+        <AuthInput type="email" id="email" placeholder="Introduza seu e-mail" />
 
-        <div class="border-1">
-          <input type="password" id="password" placeholder="Senha" class="p-2" />
-        </div>
-
-        <div class="border-1">
-          <input type="password" id="confirm_password" placeholder="Confirmar senha" class="p-2" />
-        </div>
+        <AuthInput type="password" id="password" placeholder="Introduza sua senha" />
+        <AuthInput type="password" id="confirm_password" placeholder="Confirme a sua senha" />
       </div>
 
       <div class="flex flex-row items-center justify-between">
-        <div>
-          <button class="border-1 h-[2rem] px-2"> Cadastrar-se </button>
-        </div>
+        <AuthSubmitButton label="Cadastre-se" />
 
         <div>
           <span> Ou </span>

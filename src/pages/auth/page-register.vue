@@ -8,18 +8,18 @@ const handleGoBack = () => router.back();
 </script>
 
 <template>
-  <div class="flex flex-col justify-between gap-20 h-full w-full sm:w-[20rem]">
+  <div class="flex flex-col justify-between gap-20 h-full w-full sm:w-[20rem] text-xs">
     <div class="flex flex-row justify-between items-center w-full">
-      <div class="border-1 ">
-        <button @click="handleGoBack" class="h-[2rem] w-[2rem]">
-          <i class="pi pi-chevron-left"></i>
+      <div class="">
+        <button @click="handleGoBack" class="bg-surface border-border border-1 rounded-sm h-[2rem] w-[2rem]">
+          <i class="pi pi-chevron-left" style="font-size: 10pt;"></i>
         </button>
       </div>
 
-      <div class="text-sm">
+      <div class="">
         <span>
           Já tem uma conta?
-          <RouterLink to="/auth/login"><span class="underline text-red-300"> Iniciar Sessão </span></RouterLink>
+          <RouterLink to="/auth/login"><span class="underline text-primary"> Iniciar Sessão </span></RouterLink>
         </span>
       </div>
     </div>

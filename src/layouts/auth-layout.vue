@@ -9,8 +9,8 @@
         <RouterView />
       </div>
 
-      <div class="hidden md:block w-full h-full bg-red-300">
-        <span> </span>
+      <div class="hidden md:block w-full h-full bg-primary">
+
       </div>
     </div>
   </main>
