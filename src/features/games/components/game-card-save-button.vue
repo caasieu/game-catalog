@@ -26,7 +26,7 @@ function toggleSaved() { isSaved.value = !isSaved.value; }
 
 <template>
   <button @click="toggleSaved"
-    class="flex flex-row items-center justify-center py-2 gap-2 w-full border-1 border-red-300">
+    class="flex flex-row items-center justify-center py-2 gap-2 w-full border-1 border-primary rounded-sm">
     <i class="pi" :class="savedState.icon" style="font-size: 8pt;"></i>
     <span>{{ savedState.label }}</span>
   </button>

@@ -6,7 +6,7 @@ import HeaderContainer from '@/components/ui/header/header-container.vue';
 <template>
   <HeaderContainer />
 
-  <main>
+  <main class="bg-background">
     <RouterView />
   </main>
 

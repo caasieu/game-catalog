@@ -1,23 +1,47 @@
-@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-primary: #eaedad; /* Maps to class: bg-primary, text-primary */
-  --color-secondary: #1e232a; /* Maps to class: bg-secondary, text-secondary */
-  --color-tertiary: #3a4d28; /* Maps to class: bg-secondary, text-secondary */
-  --color-quaternary: #c85a32; /* Maps to class: bg-secondary, text-secondary */
-  --color-quinary: #f7f9e3; /* Maps to class: bg-secondary, text-secondary */
-  --color-sextary: #7d9070; /* Maps to class: bg-secondary, text-secondary */
+  --color-primary: #dc143c;
+
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+  --color-card: #ffffff;
+
+  --color-text-primary: #18181b;
+  --color-text-secondary: #52525b;
+
+  --color-border: #e4e4e7;
+
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #dc143c;
 }
 
-/* Global Native Baseline Injection */
+.dark {
+  --color-background: #09090b;
+  --color-surface: #18181b;
+  --color-card: #27272a;
+
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+
+  --color-border: #3f3f46;
+}
+
 @layer base {
   html,
   body {
-    font-family: var(--font-sans);
+    font-family: 'Inter', sans-serif;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white; /*var(--color-quinary);*/
-    color: var(--color-text-main);
+
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+
+    min-height: 100vh;
   }
 }

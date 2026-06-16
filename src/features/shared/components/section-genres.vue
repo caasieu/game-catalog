@@ -13,7 +13,8 @@ const handleGenreClick = (q: string) => router.push('/search?q=' + q);
 </script>
 
 <template>
-  <div class="px-3 sm:px-6 flex flex-row gap-2 flex-wrap">
-    <div v-for="genre in genres" :key="genre" @click="handleGenreClick(genre)" class="border-1 px-3"> {{ genre }} </div>
+  <div class="flex flex-row gap-2 flex-wrap text-xs">
+    <div v-for="genre in genres" :key="genre" @click="handleGenreClick(genre)"
+      class="bg-surface border-1 border-border rounded-sm px-3 py-1"> {{ genre }} </div>
   </div>
 </template>

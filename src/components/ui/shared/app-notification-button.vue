@@ -32,14 +32,16 @@ function handleNotifications(event: MouseEvent) {
 </script>
 
 <template>
-  <div @click="handleNotifications" class="relative border-1 flex flex-row items-center justify-center h-[2rem] p-2 ">
-    <button>
-      <i class="pi pi-bell" style="font-size: 12pt;"></i>
+  <div @click="handleNotifications"
+    class="relative bg-surface border-1 border-border flex flex-row items-center justify-center h-[2rem] rounded-sm">
+    <button class="h-[2rem] w-[2rem]">
+      <i class="pi pi-bell" style="font-size: 10pt;"></i>
     </button>
 
     <!-- notification count -->
-    <div class="absolute -right-2 -top-2 bg-red-300 border-1 text-[8pt] ">
-      <span> 99+ </span>
+    <div
+      class="absolute flex items-center justify-center -right-1 -top-1 bg-primary text-white text-[6pt] h-3 w-3 p-2 rounded-full">
+      <span> 9+ </span>
     </div>
   </div>
 

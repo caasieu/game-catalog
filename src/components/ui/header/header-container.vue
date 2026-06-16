@@ -13,8 +13,8 @@ const isSearchPage = computed(() => route.path === '/search')
 
 <template>
   <header
-    class="fixed top-0 left-0 z-50 flex flex-col w-full min-h-[2rem] gap-3 px-3 py-3 sm:px-6 shadow-xs bg-white/98">
-    <div class="flex flex-row items-center justify-between w-full ">
+    class="fixed top-0 left-0 z-50 flex flex-col w-full min-h-[2rem] gap-3 px-6 py-3 shadow-sm backdrop-blur-lg bg-background/95">
+    <div class="flex flex-row items-center justify-between w-full text-xs">
       <AppLogo />
 
       <HeaderContent />

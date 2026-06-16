@@ -5,8 +5,8 @@ import FooterSocials from './footer-socials.vue';
 </script>
 
 <template>
-  <footer class="w-full min-h-[10rem] mt-10 pb-5 px-3 sm:px-6 ">
-    <div class="flex flex-col gap-3 w-full border-t-1">
+  <footer class="w-full min-h-[10rem] mt-10 pb-5 px-6 text-sm bg-surface">
+    <div class="flex flex-col gap-3 w-full ">
       <div class="flex flex-col items-center sm:flex-row sm:justify-between py-5 gap-3">
         <div class="flex flex-col items-center sm:items-start gap-3 w-full sm:w-[50%]">
           <AppLogo />
@@ -25,7 +25,7 @@ import FooterSocials from './footer-socials.vue';
       </div>
 
       <div
-        class="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between gap-3 py-5 w-full border-t-1">
+        class="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between gap-3 py-5 w-full border-t-1 border-border">
         <div>
           <span> @ 2026 Gameia, Todos os direitos reservados. </span>
         </div>

@@ -5,8 +5,9 @@
   <div class="
     relative w-full
     h-[15rem] sm:h-[20rem]
+    sm:rounded-sm overflow-hidden
   ">
-    <div class="absolute left-0 top-0 z-10 w-full h-full text-white z-0 px-6 py-6 ">
+    <div class="absolute left-0 top-0 z-10 w-full h-full z-0 px-6 py-6 text-sm">
 
       <div class="
       flex flex-col
@@ -14,19 +15,19 @@
       gap-3 w-full h-full sm:w-[50%]
       ">
 
-        <div class="">
+        <div class="text-white ">
           <h3>
             Bem-vindo à Gameia
           </h3>
         </div>
 
-        <div class="">
+        <div class="text-white ">
           <h1 class="text-2xl md:text-4xl font-bold">
             Jogos em tendências e muito mais por onde explorar.
           </h1>
         </div>
 
-        <div class="border-1 p-2 ">
+        <div class="bg-background rounded-sm text-xs p-2 px-3 ">
           <button> Ver detalhes </button>
         </div>
       </div>

@@ -3,7 +3,7 @@
 
 <template>
   <RouterLink to="/">
-    <div class="font-bold">
+    <div class="font-bold text-lg">
       <h4> Gameia </h4>
     </div>
   </RouterLink>

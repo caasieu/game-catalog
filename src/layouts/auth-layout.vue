@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main>
+  <main class="bg-background">
     <div class="flex flex-col sm:flex-row sm:justify-between sm:absolute left-0 top-0 w-full h-full">
       <div class="flex flex-col items-center w-full p-6 ">
         <RouterView />

@@ -11,7 +11,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-col justify-between gap-2 border-1 p-2 min-h-[20rem]">
+  <div class="flex flex-col justify-between gap-2 bg-surface border-1 border-border rounded-sm p-2 min-h-[20rem]">
     <GameCardImage :gameImageProps="{ id: '72343888', url: '/images/characters.webp' }" />
 
     <div class="flex flex-col w-full gap-2">

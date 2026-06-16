@@ -3,5 +3,5 @@ defineProps<{ genre: string }>()
 </script>
 
 <template>
-  <div class="border-1 px-2"> <span> {{ genre }} </span> </div>
+  <div class="bg-card border-1 border-border rounded-sm px-3 py-1"> <span> {{ genre }} </span> </div>
 </template>

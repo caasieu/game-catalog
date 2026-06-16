@@ -54,8 +54,8 @@ const gameResults = [
 </script>
 
 <template>
-  <div class="flex flex-col gap-2 px-3 sm:px-6 pt-[7rem] lg:pt-[4.5rem]">
-    <div class="font-semibold">
+  <div class="flex flex-col gap-2 px-6 pt-[7rem] lg:pt-[4.5rem]">
+    <div class="font-semibold text-sm">
       <h4> Escolha os seus jogos </h4>
     </div>
 

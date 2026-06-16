@@ -33,7 +33,7 @@
       <img class="absolute inset-0 w-full h-full object-cover " alt="user header" src="/images/background.jpg" />
 
       <!-- Dark overlay -->
-      <div class="absolute inset-0 bg-black/50 backdrop-blur-xs"></div>
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
     </div>
   </div>
 </template>

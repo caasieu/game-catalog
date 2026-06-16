@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import ToggleSwitch from 'primevue/toggleswitch';
-import { ref } from 'vue';
+import { useTheme } from './composables/use-theme';
 
-const checked = ref(false);
+
+const { isDark } = useTheme()
 
 </script>
 
@@ -10,9 +11,9 @@ const checked = ref(false);
 <template>
   <div class="card flex justify-between items-center">
     <span>
-      {{ checked ? 'Dark Mode' : 'Light Mode' }}
+      {{ isDark ? 'Dark Mode' : 'Light Mode' }}
     </span>
 
-    <ToggleSwitch v-model="checked" />
+    <ToggleSwitch v-model="isDark" />
   </div>
 </template>
