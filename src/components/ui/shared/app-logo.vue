@@ -2,7 +2,9 @@
 </script>
 
 <template>
-  <div class="font-bold">
-    <h4> Gameia </h4>
-  </div>
+  <RouterLink to="/">
+    <div class="font-bold">
+      <h4> Gameia </h4>
+    </div>
+  </RouterLink>
 </template>

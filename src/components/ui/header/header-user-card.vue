@@ -22,13 +22,10 @@ function handleSettings(event: MouseEvent) {
     popover.value.toggle(event)
   }
 }
-
-
 </script>
 
 <template>
   <AppUserInfo @click="handleSettings" />
-
 
   <Popover ref="popover">
     <template #container>

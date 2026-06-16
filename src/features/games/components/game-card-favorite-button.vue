@@ -1,9 +1,32 @@
 <script setup lang="ts">
+import { computed, ref } from 'vue';
+import type { GameFavoriteType } from '../types/game-actions-type';
+
+const props = defineProps<{
+  gameFavoriteProps?: GameFavoriteType
+}>()
+
+const isFavorite = ref(props.gameFavoriteProps?.favorite ?? false)
+
+// computa qual label e ícone usar baseado no valor de 'isFavorite'
+const favoriteState = computed(() => ({
+  label: isFavorite.value
+    ? 'Remover dos favoritos'
+    : 'Adicionar aos favoritos',
+
+  icon: isFavorite.value
+    ? 'pi-heart-fill'
+    : 'pi-heart'
+}))
+
+// acções
+function toggleFavorite() { isFavorite.value = !isFavorite.value; }
+
 </script>
 
 <template>
-  <button class="flex flex-row items-center justify-center py-2 gap-2 w-full bg-red-300">
-    <i class="pi pi-heart" style="font-size: 8pt;"></i>
-    <span>Adicionar aos favoritos</span>
+  <button @click="toggleFavorite" class="flex flex-row items-center justify-center py-2 gap-2 w-full bg-red-300">
+    <i class="pi" :class="favoriteState.icon" style="font-size: 8pt;"></i>
+    <span>{{ favoriteState.label }}</span>
   </button>
 </template>

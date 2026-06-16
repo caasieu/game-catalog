@@ -7,6 +7,6 @@
       <i class="pi pi-search"></i>
     </span>
 
-    <input class="absolute left-0 top-0 w-full h-full pl-10 pr-3" placeholder="Pesquise" />
+    <input class="absolute left-0 top-0 w-full h-full pl-10 pr-3" placeholder="Pesquisar" />
   </div>
 </template>

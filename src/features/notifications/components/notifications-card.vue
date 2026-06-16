@@ -11,7 +11,7 @@ withDefaults(
 
 <template>
   <div class="w-full " :class="avatarClass">
-    <div class="flex flex-row items-start justify-start gap-2 py-2 border-t-1 " :class="avatarClass">
+    <div class="flex flex-row items-start justify-start gap-2 py-2 border-t-1 min-h-[5rem]" :class="avatarClass">
 
       <div class="flex flex-row items-start justify-center h-full">
         <div class="flex items-center justify-center h-[1.5rem] w-[1.5rem] border-1 p-2">

@@ -1,10 +1,5 @@
 <script lang="ts" setup>
-interface SelectType {
-  id: number;
-  type: string;
-  label: string;
-  options: Array<string>;
-}
+import type { SelectType } from '../types/select-type';
 
 defineProps<{ select: SelectType }>();
 </script>

@@ -8,11 +8,11 @@ import AuthSocialLogin from '@/features/auth/components/auth-social-login.vue';
     <div class="flex flex-col gap-2 w-full">
       <div class="flex flex-col gap-2">
         <div class="border-1">
-          <input type="text" placeholder="e-mail" class="p-2" />
+          <input type="text" id="email" placeholder="e-mail" class="p-2" />
         </div>
 
         <div class="border-1">
-          <input type="password" placeholder="senha" class="p-2" />
+          <input type="password" id="password" placeholder="senha" class="p-2" />
         </div>
       </div>
 

@@ -1,19 +1,56 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import GameCardSearch from '@/features/games/components/game-card-search.vue';
 
 
-const games = ref([
-  { id: 0, name: "Gta 6" },
-  { id: 1, name: "Call of Duty" },
-  { id: 2, name: "Little Adventures" },
-  { id: 3, name: "Counter Strike 8" },
-  { id: 4, name: "gta vice city" },
-  { id: 5, name: "gta vice city" },
-  { id: 6, name: "gta vice city" },
-  { id: 7, name: "gta vice city" },
-])
-
+const gameResults = [
+  {
+    id: '234234', name: 'GTA 6', genres: [
+      'Crime',
+      'Ação',
+      'Exploração',
+    ]
+  },
+  {
+    id: '456474', name: 'Call of Duty', genres: [
+      'FPS',
+      'Ação',
+    ]
+  },
+  {
+    id: '864244', name: 'Resident Evil 7', genres: [
+      'Horror',
+      'Ação',
+      'Aventura',
+    ]
+  },
+  {
+    id: '234234', name: 'eFootball 2026', genres: [
+      'Sports',
+      'Futebol',
+      'Arcade',
+    ]
+  },
+  {
+    id: '456474', name: 'Call of Duty', genres: [
+      'FPS',
+      'Ação',
+    ]
+  },
+  {
+    id: '864244', name: 'Resident Evil 7', genres: [
+      'Horror',
+      'Ação',
+      'Aventura',
+    ]
+  },
+  {
+    id: '234234', name: 'eFootball 2026', genres: [
+      'Sports',
+      'Futebol',
+      'Arcade',
+    ]
+  },
+]
 </script>
 
 <template>
@@ -26,8 +63,7 @@ const games = ref([
     grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
     gap-3
   ">
-      <!--<CardGrid v-for="game in games" :key="game.name" :game="game" />-->
-      <GameCardSearch v-for="game in games" :key="game.name" />
+      <GameCardSearch v-for="game in gameResults" :key="game.id" :gameProps="game" />
     </div>
   </div>
 </template>
