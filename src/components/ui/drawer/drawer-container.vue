@@ -6,6 +6,7 @@ import DrawerCategories from "./drawer-categories.vue";
 import AppUserInfo from "../shared/app-user-info.vue";
 import AppLogoutButton from "../shared/app-logout-button.vue";
 import AppPremiumButton from "../shared/app-premium-button.vue";
+import AppThemeChangeButton from "../shared/app-theme-change-button.vue";
 
 
 const props = defineProps<{
@@ -54,6 +55,8 @@ const categories = [
         <div class="flex flex-col gap-2 ">
           <DrawerCategories v-for="category in categories" :key="category.label" :category="category"
             @click="closeDrawer" />
+
+          <AppThemeChangeButton />
 
           <div class="flex flex-col gap-3 text-lg py-4">
             <div class="w-full h-[3rem]">

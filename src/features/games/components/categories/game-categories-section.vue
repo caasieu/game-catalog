@@ -11,14 +11,14 @@ defineProps<{ label: string, showPagination?: boolean }>();
         <h4> {{ label }} </h4>
       </div>
 
-      <div v-if="showPagination" class="flex flex-row gap-3 items-center justify-end">
-        <div class="bg-surface border-1 border-border rounded-full text-xs">
+      <div v-if="showPagination" class="flex flex-row gap-2 items-center justify-end">
+        <div class="bg-surface border-1 border-border rounded-sm text-xs">
           <button class="w-[2rem] h-[2rem]">
             <i class="pi pi-chevron-left" style="font-size: 8pt;"></i>
           </button>
         </div>
 
-        <div class="bg-surface border-1 border-border rounded-full text-xs">
+        <div class="bg-surface border-1 border-border rounded-sm text-xs">
           <button class="w-[2rem] h-[2rem]">
             <i class="pi pi-chevron-right" style="font-size: 8pt;"></i>
           </button>

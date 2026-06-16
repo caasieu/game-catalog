@@ -7,6 +7,7 @@ import { useBreakpoints } from '@vueuse/core'
 import { Popover } from 'primevue';
 import NotificationsPerDay from '@/features/notifications/components/notifications-per-day.vue';
 import ScrollPanel from 'primevue/scrollpanel';
+import { notificationsList } from '@/features/notifications/composables/notifications-list';
 
 
 const router = useRouter()
@@ -48,7 +49,7 @@ function handleNotifications(event: MouseEvent) {
   <Popover ref="popover">
     <template #container>
       <div @click.stop>
-        <div class="flex items-center shadow-sm border-b-1 h-[3rem] px-3">
+        <div class="flex items-center shadow-sm h-[3rem] px-3 bg-card border-b-1 border-border">
           <h3 class="font-semibold">
             Notificações
           </h3>
@@ -57,12 +58,13 @@ function handleNotifications(event: MouseEvent) {
         <div class="card">
           <ScrollPanel style="width: 300px; height: 350px" :dt="{
             bar: {
-              background: 'black',
-            }
-          }">
-            <NotificationsPerDay avatarClass="px-3" cardAvatarClass="px-1.5 " />
+              //background: 'black',
+            },
 
-            <NotificationsPerDay avatarClass="px-3" cardAvatarClass="px-1.5 " />
+          }">
+
+            <NotificationsPerDay v-for="notification in notificationsList" :key="notification.day"
+              :day="notification.day" :resultsList="notification.results" avatarClass="px-3" cardAvatarClass="px-3" />
           </ScrollPanel>
         </div>
       </div>
