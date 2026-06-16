@@ -5,6 +5,8 @@ import { useRouter } from 'vue-router'
 import { useBreakpoints } from '@vueuse/core'
 
 import { Popover } from 'primevue';
+import NotificationsPerDay from '@/features/notifications/components/notifications-per-day.vue';
+import ScrollPanel from 'primevue/scrollpanel';
 
 
 const router = useRouter()
@@ -42,22 +44,26 @@ function handleNotifications(event: MouseEvent) {
   </div>
 
   <Popover ref="popover">
-    <div class="flex flex-col gap-3 min-w-[300px]">
-      <h3 class="font-semibold">
-        Notificações
-      </h3>
+    <template #container>
+      <div @click.stop>
+        <div class="flex items-center shadow-sm border-b-1 h-[3rem] px-3">
+          <h3 class="font-semibold">
+            Notificações
+          </h3>
+        </div>
 
-      <div class="border-b pb-2">
-        New comment on your review
-      </div>
+        <div class="card">
+          <ScrollPanel style="width: 300px; height: 350px" :dt="{
+            bar: {
+              background: 'black',
+            }
+          }">
+            <NotificationsPerDay avatarClass="px-3" cardAvatarClass="px-1.5 " />
 
-      <div class="border-b pb-2">
-        New game added to wishlist
+            <NotificationsPerDay avatarClass="px-3" cardAvatarClass="px-1.5 " />
+          </ScrollPanel>
+        </div>
       </div>
-
-      <div>
-        Friend is now online
-      </div>
-    </div>
+    </template>
   </Popover>
 </template>

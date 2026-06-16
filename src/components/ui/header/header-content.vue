@@ -11,7 +11,6 @@ const routes = [
 
 </script>
 
-
 <template>
   <div class="flex flex-row items-center gap-3">
     <!-- rotas de navegação visiveis apenas para desktop -->
