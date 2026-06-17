@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { RawgSearchResponse } from '../types/rawg-types'
+import type { RawgGameType, RawgSearchResponse } from '../types/rawg-types'
 
 const api = axios.create({
   baseURL: 'https://api.rawg.io/api',
@@ -50,6 +50,16 @@ export async function searchGames(query: string): Promise<RawgSearchResponse> {
       key: import.meta.env.VITE_RAWG_API_KEY,
       search: query,
       page_size: 20,
+    },
+  })
+
+  return data
+}
+
+export async function getGameDetails(id: string | number) {
+  const { data } = await api.get<RawgGameType>(`/games/${id}`, {
+    params: {
+      key: import.meta.env.VITE_RAWG_API_KEY,
     },
   })
 

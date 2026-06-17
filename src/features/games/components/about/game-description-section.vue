@@ -13,7 +13,7 @@ defineProps<{
 
     <div class="flex flex-col gap-1 text-sm">
       <div>
-        <h5 class="font-semibold text-red-300"> {{ label }} </h5>
+        <h5 class="font-semibold text-primary"> {{ label }} </h5>
       </div>
 
       <div>

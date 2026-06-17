@@ -9,6 +9,7 @@ export interface RawgGameType {
   background_image: string
   rating: number
   genres: RawgGenreType[]
+  description_raw: string
 }
 
 export interface RawgGamesResponse {

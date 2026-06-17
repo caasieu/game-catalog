@@ -1,11 +1,11 @@
 <script setup lang="ts">
+import type { RawgGameType } from '../../types/rawg-types.ts';
 import GameDescriptionSection from './game-description-section.vue';
 
-const gameAbout = {
-  label: '',
-  background_image: '/images/background.jpg',
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deserunt quos, natus tenetur illo fugit corrupti placeat molestiae aperiam dolor? Soluta rerum incidunt quia reprehenderit consequuntur repellendus, voluptate similique nulla?",
-}
+defineProps<{
+  game: RawgGameType
+}>()
+
 </script>
 
 <template>
@@ -20,8 +20,8 @@ const gameAbout = {
     </div>
 
     <div class="flex flex-col gap-4">
-      <GameDescriptionSection :label="gameAbout?.label" :background_image="gameAbout?.background_image"
-        :description="gameAbout?.description" />
+      <GameDescriptionSection :label="game.name" :background_image="game.background_image"
+        :description="game?.description_raw" />
     </div>
   </div>
 </template>

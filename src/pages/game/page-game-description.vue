@@ -1,14 +1,34 @@
 <script setup lang="ts">
-import GameDescriptionContainer from '@/features/games/components/about/game-description-container.vue';
+import { watch } from 'vue'
 import { useRoute } from 'vue-router';
+import { useGameDetails } from '@/features/games/composables/use-game-details'
+import GameDescriptionContainer from '@/features/games/components/about/game-description-container.vue';
 
-const route = useRoute();
-console.log("game id: ", route.params.id);
+
+const route = useRoute()
+
+const {
+  game,
+  loading,
+  error,
+  loadGame,
+} = useGameDetails()
+
+watch(
+  () => route.params.id,
+  (id) => {
+    if (id) loadGame(id as string)
+  },
+  { immediate: true }
+)
 
 </script>
 
 <template>
   <div class="w-full flex flex-col gap-4">
-    <GameDescriptionContainer />
+    <div v-if="loading">Carregando...</div>
+    <div v-if="error">{{ error }}</div>
+
+    <GameDescriptionContainer v-if="game" :game="game" />
   </div>
 </template>
