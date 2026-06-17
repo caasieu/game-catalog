@@ -1,6 +1,9 @@
 export interface GameType {
-  id: string | number
+  id: number
   name: string
+  image: string
+  genres: string[]
+  rating: number
 }
 
 export interface GameCardType extends GameType {

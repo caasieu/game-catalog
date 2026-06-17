@@ -1,71 +1,47 @@
 <script setup lang="ts">
-import GameCardSearch from '@/features/games/components/game-card-search.vue';
+import { watch } from 'vue'
+import { useRoute } from 'vue-router'
 
+import GameCardSearch from '@/features/games/components/game-card-search.vue'
+import { useGameSearch } from '@/features/games/composables/use-search'
 
-const gameResults = [
-  {
-    id: '234234', name: 'GTA 6', genres: [
-      'Crime',
-      'Ação',
-      'Exploração',
-    ]
-  },
-  {
-    id: '456474', name: 'Call of Duty', genres: [
-      'FPS',
-      'Ação',
-    ]
-  },
-  {
-    id: '864244', name: 'Resident Evil 7', genres: [
-      'Horror',
-      'Ação',
-      'Aventura',
-    ]
-  },
-  {
-    id: '234234', name: 'eFootball 2026', genres: [
-      'Sports',
-      'Futebol',
-      'Arcade',
-    ]
-  },
-  {
-    id: '456474', name: 'Call of Duty', genres: [
-      'FPS',
-      'Ação',
-    ]
-  },
-  {
-    id: '864244', name: 'Resident Evil 7', genres: [
-      'Horror',
-      'Ação',
-      'Aventura',
-    ]
-  },
-  {
-    id: '234234', name: 'eFootball 2026', genres: [
-      'Sports',
-      'Futebol',
-      'Arcade',
-    ]
-  },
-]
+const route = useRoute()
+
+const {
+  games,
+  loading,
+  search,
+} = useGameSearch()
+
+watch(
+  () => route.query.q,
+  (query) => search(query?.toString() ?? ''),
+  { immediate: true }
+)
+
 </script>
 
 <template>
   <div class="flex flex-col gap-2 px-6 pt-[7rem] lg:pt-[4.5rem]">
     <div class="font-semibold text-sm">
-      <h4> Escolha os seus jogos </h4>
+      <h4>
+        Resultados para "{{ route.query.q }}"
+      </h4>
     </div>
 
-    <div class="
-    grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
-    gap-3
-  ">
-      <GameCardSearch v-for="game in gameResults" :key="game.id" :gameProps="game" />
+    <div v-if="loading" class="py-10 text-center">
+      Carregando...
+    </div>
+
+    <div v-else class="
+        grid
+        grid-cols-1
+        sm:grid-cols-2
+        md:grid-cols-3
+        lg:grid-cols-4
+        gap-3
+      ">
+      <GameCardSearch v-for="game in games" :key="game.id" :gameProps="game" />
     </div>
   </div>
 </template>
-
-<style scoped></style>

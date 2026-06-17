@@ -1,4 +1,27 @@
 <script setup lang="ts">
+import { getTrendingGameForHeroSection } from '@/features/games/services/rawg-service';
+import type { TrendingGameType } from '@/features/games/types/trending-game-type';
+import { onMounted, ref } from 'vue';
+
+
+
+const game = ref<TrendingGameType | null>(null)
+const loading = ref(true)
+
+onMounted(async () => {
+  try {
+    game.value = await getTrendingGameForHeroSection()
+
+    console.log(game)
+  } catch (error) {
+    console.error(error)
+  } finally {
+    loading.value = false
+  }
+})
+
+
+
 </script>
 
 <template>
@@ -33,7 +56,7 @@
       <img class="absolute inset-0 w-full h-full object-cover " alt="user header" src="/images/background.jpg" />
 
       <!-- Dark overlay -->
-      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="absolute inset-0 bg-black/30 backdrop-blur-xs"></div>
     </div>
   </div>
 </template>

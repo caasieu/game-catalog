@@ -1,4 +1,4 @@
 export interface GameImageType {
-  id: string
-  url: string
+  id: number | undefined
+  url: string | undefined
 }

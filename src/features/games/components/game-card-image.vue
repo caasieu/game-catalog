@@ -13,6 +13,6 @@ const handleClick = () => router.push('/game/' + props.gameImageProps?.id);
 <template>
   <div @click="handleClick"
     class="relative w-full min-h-[20rem] sm:min-h-[15rem] bg-card border-1 border-border rounded-sm">
-    <img class="absolute inset-0 w-full h-full object-cover" alt="game card image" :src="gameImageProps?.url" />
+    <img class="absolute inset-0 w-full h-full object-cover" alt="" :src="gameImageProps?.url" />
   </div>
 </template>

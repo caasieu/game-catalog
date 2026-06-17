@@ -1,4 +1,26 @@
 <script setup lang="ts">
+import { ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const search = ref('')
+function updateRoute(value: string) {
+  router.replace({
+    path: '/search',
+    query: {
+      q: value,
+    },
+  })
+}
+
+watch(search, (value) => {
+  updateRoute(value)
+})
+
+function handleSearch() {
+  updateRoute(search.value)
+}
 </script>
 
 <template>
@@ -8,6 +30,7 @@
       <i class="pi pi-search" style="font-size: 10pt;"></i>
     </span>
 
-    <input class="absolute left-0 top-0 w-full h-full pl-10 pr-3  " placeholder="Pesquisar" />
+    <input v-model="search" @keyup.enter="handleSearch" class="absolute left-0 top-0 w-full h-full pl-10 pr-3  "
+      placeholder="Pesquisar jogos..." />
   </div>
 </template>

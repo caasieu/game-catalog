@@ -11,6 +11,7 @@ const routes = [
   { path: '/favorites', label: 'Meus Favoritos', icon: '' },
 ]
 
+
 </script>
 
 <template>
