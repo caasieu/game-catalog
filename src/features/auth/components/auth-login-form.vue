@@ -27,8 +27,10 @@ async function handleSubmit() {
         <AuthInput type="password" id="password" placeholder="Introduza sua senha" />
       </div>
 
-      <div class="flex flex-row items-center justify-between">
-        <AuthSubmitButton label="Iniciar Sessão" />
+      <div class="flex flex-row items-center justify-between gap-3">
+        <div class="min-w-[10rem]">
+          <AuthSubmitButton label="Iniciar Sessão" />
+        </div>
 
         <div>
           <span> Ou </span>

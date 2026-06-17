@@ -10,7 +10,7 @@ async function handleSubmit() {
   try {
     // await authStore.login(email, password)
 
-    router.push('/login')
+    router.push('/auth/login')
   } catch (error) {
     console.error(error)
   }
@@ -28,8 +28,11 @@ async function handleSubmit() {
         <AuthInput type="password" id="confirm_password" placeholder="Confirme a sua senha" />
       </div>
 
-      <div class="flex flex-row items-center justify-between">
-        <AuthSubmitButton label="Cadastre-se" />
+
+      <div class="flex flex-row items-center justify-between gap-3">
+        <div class="min-w-[10rem]">
+          <AuthSubmitButton label="Cadastre-se" />
+        </div>
 
         <div>
           <span> Ou </span>
