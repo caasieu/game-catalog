@@ -6,6 +6,10 @@ A sleek, responsive, client-side web application built to discover, search, and 
 
 ## 📸 Application Preview
 
+<a href="https://game-catalog-zeta.vercel.app">
+Visit the Vercel App: 
+</a>
+
 Here is an overview of the Game Catalog interface in action:
 
 <div align="center">
